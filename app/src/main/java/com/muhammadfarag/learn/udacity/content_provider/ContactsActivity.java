@@ -7,7 +7,8 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 import com.muhammadfarag.learn.R;
 
@@ -18,15 +19,13 @@ public class ContactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
-        TextView textView = (TextView) findViewById(R.id.udacity_content_provider_contacts_text_view);
+        ListView listView = (ListView) findViewById(R.id.udacity_content_provider_contacts_list_view);
         ContentResolver resolver = getContentResolver();
         Cursor cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
-        int wordColumnIndex = cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME);
-        while (cursor.moveToNext()) {
-            textView.append(cursor.getString(wordColumnIndex));
-            textView.append("\n");
-        }
-        cursor.close();
+
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(getApplicationContext(), android.R.layout.two_line_list_item,
+                cursor,new String[]{ContactsContract.Contacts.DISPLAY_NAME,} , new int[]{android.R.id.text1}, 0);
+        listView.setAdapter(adapter);
 
     }
 
