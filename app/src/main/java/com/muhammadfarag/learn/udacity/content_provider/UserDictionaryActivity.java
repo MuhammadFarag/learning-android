@@ -22,7 +22,7 @@ public class UserDictionaryActivity extends AppCompatActivity {
         Cursor cursor = resolver.query(UserDictionary.Words.CONTENT_URI, null, null, null, null);
         int wordColumnIndex = cursor.getColumnIndex(UserDictionary.Words.WORD);
         cursor.moveToFirst();
-        while (cursor.moveToNext()){
+        while (cursor.moveToNext()) {
             textView.append(cursor.getString(wordColumnIndex));
             textView.append("\n");
         }
