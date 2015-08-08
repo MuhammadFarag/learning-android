@@ -1,4 +1,4 @@
-package com.muhammadfarag.learningandroid;
+package com.muhammadfarag.learn;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
