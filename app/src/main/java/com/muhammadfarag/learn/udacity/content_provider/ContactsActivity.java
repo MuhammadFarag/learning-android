@@ -3,7 +3,7 @@ package com.muhammadfarag.learn.udacity.content_provider;
 import android.content.ContentResolver;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.provider.UserDictionary;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,24 +11,23 @@ import android.widget.TextView;
 
 import com.muhammadfarag.learn.R;
 
-public class UserDictionaryActivity extends AppCompatActivity {
+public class ContactsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_contacts);
 
-        TextView textView = (TextView) findViewById(R.id.udacity_content_provider_user_dictionary_text_view);
+        TextView textView = (TextView) findViewById(R.id.udacity_content_provider_contacts_text_view);
         ContentResolver resolver = getContentResolver();
-        Cursor cursor = resolver.query(UserDictionary.Words.CONTENT_URI, null, null, null, null);
-        int wordColumnIndex = cursor.getColumnIndex(UserDictionary.Words.WORD);
-        cursor.moveToFirst();
+        Cursor cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
+        int wordColumnIndex = cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME);
         while (cursor.moveToNext()) {
             textView.append(cursor.getString(wordColumnIndex));
             textView.append("\n");
         }
         cursor.close();
 
-        setContentView(R.layout.activity_user_dictionary);
     }
 
     @Override

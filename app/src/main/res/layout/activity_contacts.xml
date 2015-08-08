@@ -6,10 +6,10 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                tools:context="com.muhammadfarag.learn.udacity.content_provider.UserDictionaryActivity">
+                tools:context="com.muhammadfarag.learn.udacity.content_provider.ContactsActivity">
 
     <TextView
-        android:id="@+id/udacity_content_provider_user_dictionary_text_view"
+        android:id="@+id/udacity_content_provider_contacts_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

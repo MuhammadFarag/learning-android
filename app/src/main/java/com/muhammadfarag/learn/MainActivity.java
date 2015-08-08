@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.muhammadfarag.learn.udacity.content_provider.UserDictionaryActivity;
+import com.muhammadfarag.learn.udacity.content_provider.ContactsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         udacityContentProvider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), UserDictionaryActivity.class));
+                startActivity(new Intent(getApplicationContext(), ContactsActivity.class));
             }
         });
     }

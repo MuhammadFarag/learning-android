@@ -2,7 +2,7 @@
 <manifest package="com.muhammadfarag.learn"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".udacity.content_provider.UserDictionaryActivity"
-            android:label="@string/title_activity_user_dictionary">
+            android:name=".udacity.content_provider.ContactsActivity"
+            android:label="@string/title_activity_contacts">
         </activity>
     </application>
 
