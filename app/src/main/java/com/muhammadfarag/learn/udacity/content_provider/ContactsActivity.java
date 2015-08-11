@@ -24,9 +24,8 @@ public class ContactsActivity extends AppCompatActivity {
         Cursor cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(getApplicationContext(), android.R.layout.two_line_list_item,
-                cursor,new String[]{ContactsContract.Contacts.DISPLAY_NAME,} , new int[]{android.R.id.text1}, 0);
+                cursor, new String[]{ContactsContract.Contacts.DISPLAY_NAME,}, new int[]{android.R.id.text1}, 0);
         listView.setAdapter(adapter);
-
     }
 
     @Override
