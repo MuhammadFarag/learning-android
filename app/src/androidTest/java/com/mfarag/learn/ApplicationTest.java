@@ -1,4 +1,4 @@
-package com.muhammadfarag.learn;
+package com.mfarag.learn;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package com.muhammadfarag.learn;
+package com.mfarag.learn;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.muhammadfarag.learn.udacity.content_provider.ContactsActivity;
+import com.mfarag.learn.udacity.content_provider.ContactsActivity;
 
 public class MainActivity extends AppCompatActivity {
 

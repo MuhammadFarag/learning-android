@@ -1,4 +1,4 @@
-package com.muhammadfarag.learn.udacity.content_provider;
+package com.mfarag.learn.udacity.content_provider;
 
 import android.content.ContentResolver;
 import android.database.Cursor;
@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-import com.muhammadfarag.learn.R;
+import com.mfarag.learn.R;
 
 public class ContactsActivity extends AppCompatActivity {
 
