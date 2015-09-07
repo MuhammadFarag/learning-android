@@ -9,3 +9,9 @@ Learning how to use content resolvers and content providers
 Using contacts content provider to learn how to get data from an existing content provider. This gives an overview of *content resolver* and how to use *cursor* which is a reference to the query result
 
 While working on this exercise, I started with attempting to get User Dictionary, but this effort was not very successful on my hardware (Samsung devices). It seems that Samsung overrides the user dictionary and provide its own implementation!. Anyways, if you follow the commit history, you will find that I have switch to Contacts at some point.
+
+
+## Fragments
+Create activity with fragments, exercise is based on the book Beginning Android 4 Application Development
+
+Two fragments displayed statically in FragmentsActivityrdocd
