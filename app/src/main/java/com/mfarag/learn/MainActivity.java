@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.mfarag.learn.fragment.FragmentsActivity;
 import com.mfarag.learn.udacity.content_provider.ContactsActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), ContactsActivity.class));
+            }
+        });
+        Button fragmentsAtivity = (Button) findViewById(R.id.fragments_activity_button);
+        fragmentsAtivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), FragmentsActivity.class));
             }
         });
     }
