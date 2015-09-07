@@ -14,4 +14,4 @@ While working on this exercise, I started with attempting to get User Dictionary
 ## Fragments
 Create activity with fragments, exercise is based on the book Beginning Android 4 Application Development
 
-Two fragments displayed statically in FragmentsActivityrdocd
+Two fragments displayed statically in FragmentsActivity
