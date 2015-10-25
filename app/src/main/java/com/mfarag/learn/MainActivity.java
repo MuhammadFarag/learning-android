@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.mfarag.learn.content_provider.ContentProviderActivity;
 import com.mfarag.learn.fragment.FragmentsActivity;
 import com.mfarag.learn.udacity.content_provider.ContactsActivity;
 
@@ -24,11 +25,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), ContactsActivity.class));
             }
         });
-        Button fragmentsAtivity = (Button) findViewById(R.id.fragments_activity_button);
-        fragmentsAtivity.setOnClickListener(new View.OnClickListener() {
+        Button fragmentsAcrivityButton = (Button) findViewById(R.id.fragments_activity_button);
+        fragmentsAcrivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), FragmentsActivity.class));
+            }
+        });
+
+        findViewById(R.id.content_providers).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ContentProviderActivity.class));
             }
         });
     }
