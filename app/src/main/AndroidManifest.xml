@@ -31,9 +31,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mfarag.learn.MainActivity"/>
         </activity>
-        <activity android:name=".content_provider.ContentProviderActivity"
-                  android:label="@string/activity_label_content_provider"
+        <activity
+            android:name=".content_provider.ContentProviderActivity"
+            android:label="@string/activity_label_content_provider"
             />
+
+        <provider
+            android:name=".content_provider.ItemProvider"
+            android:authorities="com.mfarag.learn"/>
     </application>
 
 </manifest>
