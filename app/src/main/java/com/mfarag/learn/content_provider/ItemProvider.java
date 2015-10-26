@@ -138,8 +138,9 @@ class ResultCursor implements Cursor {
 
     @Override
     public boolean moveToNext() {
-        if (position >= getCount())
+        if (position >= getCount()-1) {
             return false;
+        }
         position++;
         return true;
     }
@@ -208,7 +209,7 @@ class ResultCursor implements Cursor {
 
     @Override
     public String getString(int i) {
-        return elements.get(i);
+        return elements.get(position);
     }
 
     @Override
@@ -314,5 +315,13 @@ class ResultCursor implements Cursor {
     @Override
     public Bundle respond(Bundle bundle) {
         return Bundle.EMPTY;
+    }
+
+    @Override
+    public String toString() {
+        return "ResultCursor{" +
+                "position=" + position +
+                ", elements=" + elements +
+                '}';
     }
 }

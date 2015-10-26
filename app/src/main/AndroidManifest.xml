@@ -38,7 +38,8 @@
 
         <provider
             android:name=".content_provider.ItemProvider"
-            android:authorities="com.mfarag.learn"/>
+            android:authorities="com.mfarag.learn.content_provider"
+            />
     </application>
 
 </manifest>
