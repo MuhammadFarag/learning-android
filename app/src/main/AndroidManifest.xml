@@ -46,6 +46,15 @@
             android:name=".service.MyIntentService"
             android:exported="false">
         </service>
+
+        <receiver
+            android:name=".service.ServiceManagementActivity$MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.mfarag.learn.SERVICE_CALLBACK"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

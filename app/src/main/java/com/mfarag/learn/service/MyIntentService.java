@@ -21,6 +21,9 @@ public class MyIntentService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         Log.d(TAG, "handling an intent");
+        Intent broadCastIntent = new Intent();
+        broadCastIntent.setAction("com.mfarag.learn.SERVICE_CALLBACK");
+        getBaseContext().sendBroadcast(broadCastIntent);
     }
 
 }
