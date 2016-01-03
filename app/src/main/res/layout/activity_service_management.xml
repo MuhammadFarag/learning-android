@@ -12,10 +12,17 @@
     tools:context="com.mfarag.learn.service.ServiceManagementActivity">
 
     <Button
-        android:id="@+id/button_service_start"
+        android:id="@+id/button_service_start_async"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/service_button_start"
+        android:text="@string/service_button_start_async"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_service_start_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/service_button_start_timer"
         android:textAllCaps="false"/>
 
     <Button

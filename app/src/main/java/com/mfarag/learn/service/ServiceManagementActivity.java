@@ -20,11 +20,14 @@ public class ServiceManagementActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.button_service_start, R.id.button_service_stop})
-    public void startService(Button button){
-        switch(button.getId()){
-            case R.id.button_service_start:
-                startService(new Intent(this, MyService.class));
+    @OnClick({R.id.button_service_start_async, R.id.button_service_start_timer, R.id.button_service_stop})
+    public void startService(Button button) {
+        switch (button.getId()) {
+            case R.id.button_service_start_async:
+                startService(MyService.createIntent(this, MyService.TASK_ASYNC));
+                break;
+            case R.id.button_service_start_timer:
+                startService(MyService.createIntent(this, MyService.TASK_TIMER));
                 break;
             case R.id.button_service_stop:
                 stopService(new Intent(this, MyService.class));
