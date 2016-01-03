@@ -109,7 +109,9 @@ public class MyService extends Service {
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
             Log.d(TAG, "Execution completed: " + aLong);
-            stopSelf();
+            if (mTimer == null) {
+                stopSelf();
+            }
         }
     }
 }
