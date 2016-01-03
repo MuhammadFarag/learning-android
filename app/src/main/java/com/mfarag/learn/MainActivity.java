@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.mfarag.learn.content_provider.ContentProviderActivity;
 import com.mfarag.learn.fragment.FragmentsActivity;
+import com.mfarag.learn.service.ServiceManagementActivity;
 import com.mfarag.learn.udacity.content_provider.ContactsActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), ContentProviderActivity.class));
+            }
+        });
+
+        findViewById(R.id.service_management).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ServiceManagementActivity.class));
             }
         });
     }
