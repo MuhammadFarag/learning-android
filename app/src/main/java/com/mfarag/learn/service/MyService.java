@@ -1,4 +1,4 @@
-package com.mfarag.learningandroid;
+package com.mfarag.learn.service;
 
 import android.app.Service;
 import android.content.Context;

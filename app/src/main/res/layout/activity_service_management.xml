@@ -31,5 +31,11 @@
         android:layout_height="wrap_content"
         android:text="@string/service_button_stop"
         android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/button_intent_service_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_service_button_start"
+        android:textAllCaps="false"/>
 
 </LinearLayout>

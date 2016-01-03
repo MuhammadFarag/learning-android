@@ -41,8 +41,11 @@
         <activity android:name=".service.ServiceManagementActivity">
         </activity>
 
+        <service android:name=".service.MyService"/>
         <service
-            android:name="com.mfarag.learningandroid.MyService" />
+            android:name=".service.MyIntentService"
+            android:exported="false">
+        </service>
     </application>
 
 </manifest>
