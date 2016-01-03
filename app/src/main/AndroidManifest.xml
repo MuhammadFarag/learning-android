@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.mfarag.learn"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.mfarag.learn"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
@@ -41,6 +40,9 @@
 
         <activity android:name=".service.ServiceManagementActivity">
         </activity>
+
+        <service
+            android:name="com.mfarag.learningandroid.MyService" />
     </application>
 
 </manifest>

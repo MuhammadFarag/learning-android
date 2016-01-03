@@ -13,4 +13,6 @@
     <string name="content_provider">Content Provider</string>
     <string name="activity_label_content_provider">Content Provider</string>
     <string name="label_service_management">Service Management</string>
+    <string name="service_button_start">Start Service</string>
+    <string name="service_button_stop">Stop Service</string>
 </resources>
