@@ -3,9 +3,9 @@ package com.mfarag.learn;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 import com.mfarag.learn.content_provider.ContentProviderActivity;
@@ -13,41 +13,42 @@ import com.mfarag.learn.fragment.FragmentsActivity;
 import com.mfarag.learn.service.ServiceManagementActivity;
 import com.mfarag.learn.udacity.content_provider.ContactsActivity;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity {
+
+
+    public static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button udacityContentProvider = (Button) findViewById(R.id.udacity_content_provider_user_dictionary);
-        udacityContentProvider.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ContactsActivity.class));
-            }
-        });
-        Button fragmentsAcrivityButton = (Button) findViewById(R.id.fragments_activity_button);
-        fragmentsAcrivityButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), FragmentsActivity.class));
-            }
-        });
-
-        findViewById(R.id.content_providers).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ContentProviderActivity.class));
-            }
-        });
-
-        findViewById(R.id.service_management).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ServiceManagementActivity.class));
-            }
-        });
+        ButterKnife.bind(this);
     }
+
+    @OnClick({R.id.udacity_content_provider_user_dictionary, R.id.fragments_activity_button, R.id.content_providers, R.id.service_management})
+    public void startActivity(Button button) {
+        switch (button.getId()) {
+            case R.id.udacity_content_provider_user_dictionary:
+                startActivity(new Intent(this, ContactsActivity.class));
+                break;
+            case R.id.fragments_activity_button:
+                startActivity(new Intent(this, FragmentsActivity.class));
+                break;
+            case R.id.content_providers:
+                startActivity(new Intent(this, ContentProviderActivity.class));
+                break;
+            case R.id.service_management:
+                startActivity(new Intent(this, ServiceManagementActivity.class));
+                break;
+            default:
+                Log.w(TAG, "Unknown item clicked, id: " + button.getId());
+                break;
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
