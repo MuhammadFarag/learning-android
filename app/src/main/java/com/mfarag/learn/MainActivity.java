@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.mfarag.learn.content_provider.ContentProviderActivity;
 import com.mfarag.learn.fragment.FragmentsActivity;
+import com.mfarag.learn.notifications.NotificationsActivity;
 import com.mfarag.learn.service.ServiceManagementActivity;
 import com.mfarag.learn.udacity.content_provider.ContactsActivity;
 
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.udacity_content_provider_user_dictionary, R.id.fragments_activity_button, R.id.content_providers, R.id.service_management})
+    @OnClick({R.id.udacity_content_provider_user_dictionary, R.id.fragments_activity_button, R.id.content_providers, R.id.service_management, R.id.notifications})
     public void startActivity(Button button) {
         switch (button.getId()) {
             case R.id.udacity_content_provider_user_dictionary:
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.service_management:
                 startActivity(new Intent(this, ServiceManagementActivity.class));
+                break;
+            case R.id.notifications:
+                startActivity(new Intent(this, NotificationsActivity.class));
                 break;
             default:
                 Log.w(TAG, "Unknown item clicked, id: " + button.getId());

@@ -55,6 +55,9 @@
                 <action android:name="com.mfarag.learn.SERVICE_CALLBACK"/>
             </intent-filter>
         </receiver>
+
+        <activity android:name=".notifications.NotificationsActivity">
+        </activity>
     </application>
 
 </manifest>
