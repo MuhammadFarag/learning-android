@@ -23,26 +23,30 @@ public class ImplicitIntentActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.open_url_in_browser, R.id.intent_no_valid_action})
+    @OnClick({R.id.open_url_in_browser, R.id.intent_no_valid_action, R.id.open_map})
     public void sendIntent(Button button) {
         Intent intent;
         switch (button.getId()) {
             case R.id.open_url_in_browser:
                 intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mfarag.com"));
-                startActivity(intent);
                 break;
             case R.id.intent_no_valid_action:
                 intent = new Intent("Not a valid action");
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(this, "Nothing to be done, the required action is not valid", Toast.LENGTH_SHORT).show();
-                    Log.w(TAG, "No application available to handle the required action: \"Not a valid action\"");
-                }
+                break;
+            case R.id.open_map:
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=Toronto, ON, Canada"));
                 break;
             default:
+                intent = new Intent();
                 Log.w(TAG, "Unknown button id");
                 break;
+        }
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Nothing to be done, the required action is not valid", Toast.LENGTH_SHORT).show();
+            Log.w(TAG, "No application available to handle the required action");
         }
     }
 }
