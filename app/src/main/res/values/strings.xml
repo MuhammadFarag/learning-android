@@ -30,4 +30,22 @@
     <string name="pref_category_title">Preference Category</string>
     <string name="pref_screen_summary">Preference Screen Summary</string>
     <string name="pref_screen_title">Preference Screen Title</string>
+    <string name="pref_editbox_key">pref_key_edit_box</string>
+    <string name="pref_editbox_title">EditBox Title</string>
+    <string name="pref_editbox_summary">EditBox Summary</string>
+    <string name="pref_list_key">pref_key_list</string>
+    <string name="pref_list_title">List Preference title</string>
+    <string name="pref_list_summary">List Preference Summary</string>
+    <string name="pref_list_default">list_item_2</string>
+
+    <string-array name="pref_list_entries">
+        <item name="pref_list_item_1">First item</item>
+        <item name="pref_list_item_2">Second item</item>
+        <item name="pref_list_item_3">Third item</item>
+    </string-array>
+    <string-array name="pref_list_entryValues">
+        <item name="pref_list_item_value_1">list_item_1</item>
+        <item name="pref_list_item_value_2">list_item_2</item>
+        <item name="pref_list_item_value_3">list_item_3</item>
+    </string-array>
 </resources>

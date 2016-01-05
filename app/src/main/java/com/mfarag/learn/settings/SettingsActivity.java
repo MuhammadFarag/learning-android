@@ -35,6 +35,8 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
             Log.d(TAG, "New value is: " + sharedPreferences.getBoolean(getString(R.string.pref_key_checkbox2), false));
         } else if (key.equals(getString(R.string.pref_key_checkbox3))) {
             Log.d(TAG, "New value is: " + sharedPreferences.getBoolean(getString(R.string.pref_key_checkbox3), false));
+        } else {
+            Log.d(TAG, "New value is: " + sharedPreferences.getString(key, "No value set"));
         }
 
 

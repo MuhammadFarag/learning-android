@@ -26,6 +26,17 @@
             android:key="@string/pref_key_checkbox3"
             android:summary="@string/pref_summary_checkbox"
             android:title="@string/pref_title_checkbox"/>
+        <EditTextPreference
+            android:key="@string/pref_editbox_key"
+            android:title="@string/pref_editbox_title"
+            android:summary="@string/pref_editbox_summary"/>
+        <ListPreference
+            android:key="@string/pref_list_key"
+            android:title="@string/pref_list_title"
+            android:summary="@string/pref_list_summary"
+            android:entries="@array/pref_list_entries"
+            android:entryValues="@array/pref_list_entryValues"
+            android:defaultValue="@string/pref_list_default"/>
     </PreferenceScreen>
 
 </PreferenceScreen>
