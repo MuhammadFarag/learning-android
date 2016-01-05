@@ -14,6 +14,7 @@
     <string name="activity_label_content_provider">Content Provider</string>
     <string name="label_service_management">Service Management</string>
     <string name="label_notifications">Notifications</string>
+    <string name="label_implicit_intent">Implicit Intents</string>
     <string name="service_button_start_async">Start Service A with AsyncTask</string>
     <string name="service_button_start_timer">Start Service A with Timer</string>
     <string name="service_button_stop">Stop Service A</string>

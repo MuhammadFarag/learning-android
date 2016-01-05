@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.mfarag.learn.content_provider.ContentProviderActivity;
 import com.mfarag.learn.fragment.FragmentsActivity;
+import com.mfarag.learn.intent.ImplicitIntentActivity;
 import com.mfarag.learn.notifications.NotificationsActivity;
 import com.mfarag.learn.service.ServiceManagementActivity;
 import com.mfarag.learn.settings.SettingsActivity;
@@ -32,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
     }
 
-    @OnClick({R.id.udacity_content_provider_user_dictionary, R.id.fragments_activity_button, R.id.content_providers, R.id.service_management, R.id.notifications})
+    @OnClick({R.id.udacity_content_provider_user_dictionary,
+            R.id.fragments_activity_button, R.id.content_providers,
+            R.id.service_management, R.id.notifications,
+            R.id.implicit_intent})
     public void startActivity(Button button) {
         switch (button.getId()) {
             case R.id.udacity_content_provider_user_dictionary:
@@ -49,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.notifications:
                 startActivity(new Intent(this, NotificationsActivity.class));
+                break;
+           case R.id.implicit_intent:
+                startActivity(new Intent(this, ImplicitIntentActivity.class));
                 break;
             default:
                 Log.w(TAG, "Unknown item clicked, id: " + button.getId());

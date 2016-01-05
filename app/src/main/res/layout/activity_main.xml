@@ -44,4 +44,11 @@
         android:text="@string/label_notifications"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/implicit_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_implicit_intent"
+        android:textAllCaps="false"/>
+
 </LinearLayout>
