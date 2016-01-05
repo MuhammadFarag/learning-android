@@ -12,6 +12,7 @@ import com.mfarag.learn.content_provider.ContentProviderActivity;
 import com.mfarag.learn.fragment.FragmentsActivity;
 import com.mfarag.learn.notifications.NotificationsActivity;
 import com.mfarag.learn.service.ServiceManagementActivity;
+import com.mfarag.learn.settings.SettingsActivity;
 import com.mfarag.learn.udacity.content_provider.ContactsActivity;
 
 import butterknife.ButterKnife;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
 

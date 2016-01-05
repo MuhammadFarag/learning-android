@@ -58,6 +58,8 @@
 
         <activity android:name=".notifications.NotificationsActivity">
         </activity>
+        <activity android:name=".settings.SettingsActivity">
+        </activity>
     </application>
 
 </manifest>

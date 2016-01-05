@@ -21,4 +21,10 @@
     <string name="button_show_simple_notification">Show basic notification</string>
     <string name="notification_simple_title">Simple notification</string>
     <string name="notification_simple_text">A demo for a simple notification</string>
+    <string name="pref_title_checkbox">Hello</string>
+    <string name="pref_key_checkbox">com.mfarag.learn.pref.CHECKBOX</string>
+    <string name="pref_key_checkbox1">com.mfarag.learn.pref.CHECKBOX1</string>
+    <string name="pref_key_checkbox2">com.mfarag.learn.pref.CHECKBOX2</string>
+    <string name="pref_key_checkbox3">com.mfarag.learn.pref.CHECKBOX3</string>
+    <string name="pref_summary_checkbox">some summary</string>
 </resources>
