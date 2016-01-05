@@ -3,7 +3,9 @@ package com.mfarag.learn;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ShareActionProvider;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.notifications:
                 startActivity(new Intent(this, NotificationsActivity.class));
                 break;
-           case R.id.implicit_intent:
+            case R.id.implicit_intent:
                 startActivity(new Intent(this, ImplicitIntentActivity.class));
                 break;
             default:
@@ -68,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        MenuItem item = menu.findItem(R.id.action_share);
+
+        ShareActionProvider actionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
+        if (actionProvider != null) {
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.putExtra(Intent.EXTRA_TEXT, "Learning Android app");
+            intent.setType("text/plain");
+            actionProvider.setShareIntent(intent);
+        }
         return true;
     }
 
