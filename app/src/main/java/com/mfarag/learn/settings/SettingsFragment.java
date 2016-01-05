@@ -21,7 +21,6 @@ public class SettingsFragment extends PreferenceFragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

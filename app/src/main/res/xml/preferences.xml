@@ -6,10 +6,12 @@
         android:summary="@string/pref_summary_checkbox"
         android:title="@string/pref_title_checkbox"/>
 
-    <Preference android:title="@string/pref_about_title"
-        android:summary="@string/pref_about_summary">
-        <intent android:action="android.intent.action.VIEW"
-                android:data="@string/pref_about_target_url" />
+    <Preference
+        android:summary="@string/pref_about_summary"
+        android:title="@string/pref_about_title">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="@string/pref_about_target_url"/>
     </Preference>
     <PreferenceCategory
         android:title="@string/pref_category_title">
@@ -34,15 +36,15 @@
             android:title="@string/pref_title_checkbox"/>
         <EditTextPreference
             android:key="@string/pref_editbox_key"
-            android:title="@string/pref_editbox_title"
-            android:summary="@string/pref_editbox_summary"/>
+            android:summary="@string/pref_editbox_summary"
+            android:title="@string/pref_editbox_title"/>
         <ListPreference
-            android:key="@string/pref_list_key"
-            android:title="@string/pref_list_title"
-            android:summary="@string/pref_list_summary"
+            android:defaultValue="@string/pref_list_default"
             android:entries="@array/pref_list_entries"
             android:entryValues="@array/pref_list_entryValues"
-            android:defaultValue="@string/pref_list_default"/>
+            android:key="@string/pref_list_key"
+            android:summary="@string/pref_list_summary"
+            android:title="@string/pref_list_title"/>
     </PreferenceScreen>
 
 </PreferenceScreen>
