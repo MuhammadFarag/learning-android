@@ -27,4 +27,7 @@
     <string name="pref_key_checkbox2">com.mfarag.learn.pref.CHECKBOX2</string>
     <string name="pref_key_checkbox3">com.mfarag.learn.pref.CHECKBOX3</string>
     <string name="pref_summary_checkbox">some summary</string>
+    <string name="pref_category_title">Preference Category</string>
+    <string name="pref_screen_summary">Preference Screen Summary</string>
+    <string name="pref_screen_title">Preference Screen Title</string>
 </resources>

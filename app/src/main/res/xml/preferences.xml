@@ -2,23 +2,30 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <CheckBoxPreference
         android:defaultValue="true"
-        android:title="@string/pref_title_checkbox"
         android:key="@string/pref_key_checkbox"
-        android:summary="@string/pref_summary_checkbox"/>
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:title="@string/pref_title_checkbox"
-        android:key="@string/pref_key_checkbox1"
-        android:summary="@string/pref_summary_checkbox"/>
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:title="@string/pref_title_checkbox"
-        android:key="@string/pref_key_checkbox2"
-        android:summary="@string/pref_summary_checkbox"/>
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="@string/pref_key_checkbox3"
         android:summary="@string/pref_summary_checkbox"
         android:title="@string/pref_title_checkbox"/>
+    <PreferenceCategory
+        android:title="@string/pref_category_title">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_checkbox1"
+            android:summary="@string/pref_summary_checkbox"
+            android:title="@string/pref_title_checkbox"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_checkbox2"
+            android:summary="@string/pref_summary_checkbox"
+            android:title="@string/pref_title_checkbox"/>
+    </PreferenceCategory>
+    <PreferenceScreen
+        android:summary="@string/pref_screen_summary"
+        android:title="@string/pref_screen_title">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_checkbox3"
+            android:summary="@string/pref_summary_checkbox"
+            android:title="@string/pref_title_checkbox"/>
+    </PreferenceScreen>
 
 </PreferenceScreen>
