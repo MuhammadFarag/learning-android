@@ -41,6 +41,8 @@
     <string name="pref_about_title">About</string>
     <string name="pref_about_summary">Will give you the right information about me :)</string>
     <string name="pref_about_target_url">http://www.mfarag.com</string>
+    <string name="implicit_intent_label_open_in_browser">Open Url in the browser</string>
+    <string name="implicit_intent_label_invalid_action">Invalid action, doesn\'t crash</string>
 
     <string-array name="pref_list_entries">
         <item name="pref_list_item_1">First item</item>
