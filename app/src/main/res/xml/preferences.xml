@@ -5,6 +5,12 @@
         android:key="@string/pref_key_checkbox"
         android:summary="@string/pref_summary_checkbox"
         android:title="@string/pref_title_checkbox"/>
+
+    <Preference android:title="@string/pref_about_title"
+        android:summary="@string/pref_about_summary">
+        <intent android:action="android.intent.action.VIEW"
+                android:data="@string/pref_about_target_url" />
+    </Preference>
     <PreferenceCategory
         android:title="@string/pref_category_title">
         <CheckBoxPreference
