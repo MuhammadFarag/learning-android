@@ -1,7 +1,6 @@
 package com.mfarag.learn;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -30,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        Log.d(TAG, "Editbox shared preference is: " + defaultSharedPreferences.getString("pref_key_editbox", "Not saved yet"));
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
     }
 
     @OnClick({R.id.udacity_content_provider_user_dictionary, R.id.fragments_activity_button, R.id.content_providers, R.id.service_management, R.id.notifications})
